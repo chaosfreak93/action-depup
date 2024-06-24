@@ -71,6 +71,6 @@ if [ "${CURRENT_VERSION}" = "${LATEST_VERSION}" ]; then
 fi
 
 echo "Updating ${VERSION_NAME} to ${LATEST_VERSION} in ${FILE}"
-perl -i -pe "s/${VERSION_NAME}(?:\s*=\s*|:?\s*)[\"|\']?v?\K\d+\.\d+(\.\d+)?(-[^\'\"\s]*)?/${LATEST_VERSION}/g" "${FILE}"
+perl -i -pe "s/${VERSION_NAME}(?:\s*=\s*|:?\s*)[\"|\']?v?\K\d+\.\d+\.\d+\.\d+\.?(-[^\'\"\s]*)?/${LATEST_VERSION}/g" "${FILE}"
 
 echo "Updated. Commit and create Pull-Request as you need."
